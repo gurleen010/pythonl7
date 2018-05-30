@@ -1,0 +1,81 @@
+'' Q.1- What is Time Tuple? '''
+>>> import datetime
+>>> d = datetime.date(2017, 11, 10)
+>>> d.timetuple()
+time.struct_time(tm_year=2017, tm_mon=11, tm_mday=10, tm_hour=0,
+tm_min=0, tm_sec=0, tm_wday=4, tm_yday=314, tm_isdst=-1)
+>>> tuple(d.timetuple())
+(2017, 11, 10, 0, 0, 0, 4, 314, -1)
+timetuple(...)
+     |      Return time tuple
+
+
+
+
+''' Q.2- Write a program to get formatted time. '''
+
+import time;
+localtime=time.asctime(time.localtime())
+print(localtime)
+
+
+''' Q.3- Extract month from the time. '''
+
+import datetime
+d=datetime.date.today()
+mon=d.month
+print(mon)
+
+
+
+
+''' Q.4- Extract day from the time. '''
+import datetime
+d=datetime.date.today()
+d1=d.strftime("%A")
+print(d1)
+
+
+'''Q.5- Extract date (ex : 11 in 11/01/2021) from the time.'''
+
+import datetime
+d=datetime.date.today()
+date1=d.day
+print(date1)
+
+
+'''Q.6- Write a program to print time using localtime method.'''
+
+import time
+lc=time.asctime(time.localtime())
+print(lc)
+
+
+''' Q.7- Find the factorial of a number input by user using math package
+functions. '''
+
+import math as m;
+i=int(input("Enter a number to find factorial of: "))
+print("Factorial of {} = {}".format(i,m.factorial(i)))
+
+
+
+
+''' Q.8- Find the GCD of a number input by user using math package
+functions. '''
+
+import math as m;
+in1=int(input("Enter first number: "))
+in2=int(input("Enter first number: "))
+print("GCD of {} and {}  = {}".format(in1,in2,m.gcd(in1,in2)))
+
+
+
+''' Q.9- Use OS package and do the following tasks:
+1. Get current working directory.
+2. Get the user environment. '''
+
+import os;
+print(os.getcwd())
+print(os.path.abspath('.'))
+
